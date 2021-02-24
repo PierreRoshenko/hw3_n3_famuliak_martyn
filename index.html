@@ -9,7 +9,94 @@
 </head>
 
 <body>
+    <!--Task1-->
+    <div id="task_1" style="padding: 10px;">
+        <p>Завдання 1. Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі. Приклади: 1236 -> 6, 987 -> 9, 385 -> 8</p>
+        <br> Введіть числа: <input type="text" id="txt1"> ==>
+        <a id="res_1"></a>
+    </div>
+    <input type="button" value="run function" onclick="getMaxDigit()">
+    <hr>
 
+    <!--Task1-->
+    <div id="task_2" style="padding: 10px;">
+        <p>Завдання 2. Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл</p>
+        <br> Введіть число, яке треба пілняти до степення: <input type="text" id="txt2"> Введіть степінь: <input type="text" id="txt2_1"> =
+        <a id="res_2"></a>
+    </div>
+    <input type="button" value="run function" onclick="getDigitPow()">
+    <hr>
+    <!--Task3-->
+    <div id="task_3" style="padding: 10px;">
+        <p>Завдання 3. Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі)</p>
+        <br> Введіть слово: <input type="text" id="txt3"> ==>
+        <a id="res_3"></a>
+    </div>
+    <input type="button" value="run function" onclick="upperFirstLetter()">
+    <hr>
+    <!--Task4-->
+    <div id="task_4" style="padding: 10px;">
+        <p>Завдання 4. Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805</p>
+        <br> Введіть свою зарплату: <input type="text" id="txt4"> ==>
+        <a id="res_4"></a>
+    </div>
+    <input type="button" value="run function" onclick="calculateMySalary()">
+    <hr>
+    <!--Task5-->
+    <div id="task_5" style="padding: 10px;">
+        <p>Завдання 5. Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5</p>
+        <br> Введіть перше число: <input type="text" id="txt5"> Введіть друге число: <input type="text" id="txt5_1"> ==>
+        <a id="res_5"></a>
+    </div>
+    <input type="button" value="run function" onclick="getRandom()">
+    <hr>
+    <!--Task6-->
+    <div id="task_6" style="padding: 10px;">
+        <p>Завдання 6. Створити функцію, яка рахує скільки разів певна буква повторюється в слові.</p>
+        <br> Введіть слово: <input type="text" id="txt6"> Введіть літеру: <input type="text" id="txt6_1">==>
+        <a id="res_6"></a>
+    </div>
+    <input type="button" value="run function" onclick="calculateSameLetters()">
+    <hr>
+    <!--Task7-->
+    <div id="task_7" style="padding: 10px;">
+        <p>Завдання 7. Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500 грн. або convertCurrency("2500UAH") -> 100$</p>
+        <br> Введіть згідно шаблону(СУМАuah чи СУМА$): <input type="text" id="txt7"> ==>
+        <a id="res_7"></a>
+    </div>
+    <input type="button" value="run function" onclick="convertCurrency()">
+    <hr>
+    <!--Task8-->
+    <div id="task_8" style="padding: 10px;">
+        <p>Завдання 8. Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам</p>
+        <br> Введіть довжину пароля: <input type="text" id="txt8"> ==>
+        <a id="res_8"></a>
+    </div>
+    <input type="button" value="run function" onclick="getPassword()">
+    <hr>
+    <!--Task9-->
+    <div id="task_9" style="padding: 10px;">
+        <p>Завдання 9. Створіть функцію, яка видаляє всі букви з речення</p>
+        <br> Введіть речення: <input type="text" id="txt9"> Введіть літеру яку потрібно видалити: <input type="text" id="txt9_1">==>
+        <a id="res_9"></a>
+    </div>
+    <input type="button" value="run function" onclick="removeLetter()">
+    <hr>
+    <!--Task10-->
+    <div id="task_10" style="padding: 10px;">
+        <p>Завдання 10. Створіть функцію, яка перевіряє, чи є слово паліндромом.</p>
+        <br> Введіть речення: <input type="text" id="txt10"> ==>
+        <a id="res_10"></a>
+    </div>
+    <input type="button" value="run function" onclick="isPalindrome()">
+    <hr>
+    <!--Task11-->
+    <div id="task_11" style="padding: 10px;">
+        <p>Завдання 11. Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу.</p>
+        <br> Введіть речення: <input type="text" id="txt11"> ==>
+        <a id="res_11"></a>
+    </div>
+    <input type="button" value="run function" onclick="removeSameLetters()">
 </body>
 <script src="main.js"></script>
 
