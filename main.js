@@ -80,16 +80,17 @@ function convertCurrency() {
     const userInput = String(document.getElementById('txt7').value);
     const reDol = /([0-9,]+(\.[0-9]{2}))?\$/;
     const reUah = /([0-9,]+(\.[0-9]{2})?)uah/;
-
+    const dolToUah = 27.995;
+    const uahToDol = 0.0358;
 
     if (reDol.test(userInput)) {
         const numDol = parseFloat(userInput.match(/([0-9,]+(\.[0-9]{2})?)/))
-        const res = numDol * 0.0358;
+        const res = numDol * dolToUah;
         document.getElementById("res_7").innerHTML = res.toFixed(2) + ' грн';
 
     } else if (reUah.test(userInput)) {
         const numUah = parseFloat(userInput.match(/([0-9,]+(\.[0-9]{2})?)/))
-        const res = numUah / 27.995
+        const res = numUah * uahToDol;
         document.getElementById("res_7").innerHTML = res.toFixed(2) + '$';
     } else {
         document.getElementById("res_7").innerHTML = 'Введіть згідно шаблону!!!!(СУМАuah чи СУМА$)';
@@ -113,15 +114,21 @@ function getPassword() {
 }
 
 function removeLetter() {
-    let userInput = String(document.getElementById('txt9').value);
-    const userInput2 = String(document.getElementById('txt9_1').value);
+    let userInput = String(document.getElementById('txt9').value).toLowerCase();
+    const userInput2 = String(document.getElementById('txt9_1').value).toLowerCase();
 
-    for (let i = 0; i < userInput.length; i++) {
-        if (userInput[i] == userInput2) {
-            userInput = userInput.replace(userInput2, '');
+    if (userInput.match(/^[a-zA-Z_ ]*$/) && userInput2.match(/^[a-zA-Z_ ]*$/)) {
+
+
+        for (let i = 0; i < userInput.length; i++) {
+            if (userInput[i] == userInput2) {
+                userInput = userInput.replace(userInput2, '');
+            }
         }
+        document.getElementById("res_9").innerHTML = userInput;
+    } else {
+        document.getElementById("res_9").innerHTML = 'Введіть лише літери';
     }
-    document.getElementById("res_9").innerHTML = userInput;
 }
 
 function isPalindrome() {
